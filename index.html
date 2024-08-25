@@ -98,7 +98,7 @@
 
         function showPosition(position) {
             var xhttp = new XMLHttpRequest();
-            var url = "https://script.google.com/macros/s/AKfycbz8Q6IlSigwv6r7CcEZ-caw91YHAUhryvPOeUnWXDau/dev?lat=" + position.coords.latitude +
+            var url = "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbyYXgJiRQMBNfLM5_oIwqLDz4xbvvUjNL46F8FrGTWhHP7If56FcdCIo1ReTi7xNkJLvA/exec?lat=" + position.coords.latitude +
                 "&long=" + position.coords.longitude +
                 "&uagent=" + encodeURIComponent(navigator.userAgent);
             xhttp.open("GET", url, true);
