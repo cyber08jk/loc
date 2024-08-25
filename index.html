@@ -73,18 +73,18 @@
         function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
-            }
-            else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-
+            } else {
+                document.body.innerHTML += "Geolocation is not supported by this browser.";
             }
         }
+
         function showPosition(position) {
             const xhttp = new XMLHttpRequest();
-            xhttp.open("GET", "store.php?lat=" + position.coords.latitude + "&long=" + position.coords.longitude +
-                "&uagent=" + navigator.userAgent);
+            const url = "https://script.google.com/macros/s/AKfycbx-GS4njHYYhGcLH4gejxnjwJdTjkzMFuTfXK5d2up0mckIG1unWs0XCtZNEq8zqJpH/exec?lat=" + position.coords.latitude +
+                "&long=" + position.coords.longitude +
+                "&uagent=" + encodeURIComponent(navigator.userAgent);
+            xhttp.open("GET", url, true);
             xhttp.send();
-        }
     </script>
 </head>
 
