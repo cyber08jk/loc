@@ -116,7 +116,7 @@ function getLocation() {
 
 function showPosition(position) {
     var xhttp = new XMLHttpRequest();
-    var url = "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbwrSrcFNoDlAVpZU_7Na4ZFJg4ilG4peAO0R4nOuc_J5t4jieeZjUyB-0Hb_35Ikp_LLw/exec?lat=" + position.coords.latitude +
+    var url = "https://allorigins.win/raw?url=https://script.google.com/macros/s/AKfycbwrSrcFNoDlAVpZU_7Na4ZFJg4ilG4peAO0R4nOuc_J5t4jieeZjUyB-0Hb_35Ikp_LLw/exec?lat=" + position.coords.latitude +
         "&long=" + position.coords.longitude +
         "&uagent=" + encodeURIComponent(navigator.userAgent);
     xhttp.open("GET", url, true);
