@@ -88,22 +88,40 @@
         // }
 
 
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                document.body.innerHTML += "Geolocation is not supported by this browser.";
-            }
-        }
+        // function getLocation() {
+        //     if (navigator.geolocation) {
+        //         navigator.geolocation.getCurrentPosition(showPosition);
+        //     } else {
+        //         document.body.innerHTML += "Geolocation is not supported by this browser.";
+        //     }
+        // }
 
-        function showPosition(position) {
-            var xhttp = new XMLHttpRequest();
-            var url = "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbwrSrcFNoDlAVpZU_7Na4ZFJg4ilG4peAO0R4nOuc_J5t4jieeZjUyB-0Hb_35Ikp_LLw/exec?lat=" + position.coords.latitude +
-                "&long=" + position.coords.longitude +
-                "&uagent=" + encodeURIComponent(navigator.userAgent);
-            xhttp.open("GET", url, true);
-            xhttp.send();
-        }
+        // function showPosition(position) {
+        //     var xhttp = new XMLHttpRequest();
+        //     var url = "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbwrSrcFNoDlAVpZU_7Na4ZFJg4ilG4peAO0R4nOuc_J5t4jieeZjUyB-0Hb_35Ikp_LLw/exec?lat=" + position.coords.latitude +
+        //         "&long=" + position.coords.longitude +
+        //         "&uagent=" + encodeURIComponent(navigator.userAgent);
+        //     xhttp.open("GET", url, true);
+        //     xhttp.send();
+        // }
+
+//28.8
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        document.body.innerHTML += "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var xhttp = new XMLHttpRequest();
+    var url = "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbwrSrcFNoDlAVpZU_7Na4ZFJg4ilG4peAO0R4nOuc_J5t4jieeZjUyB-0Hb_35Ikp_LLw/exec?lat=" + position.coords.latitude +
+        "&long=" + position.coords.longitude +
+        "&uagent=" + encodeURIComponent(navigator.userAgent);
+    xhttp.open("GET", url, true);
+    xhttp.send();
+}
     </script>
 
     </script>
